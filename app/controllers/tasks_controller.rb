@@ -29,8 +29,8 @@ class TasksController < ApplicationController
   end
 
   def destroy
-    @task = task.find(params[:id])
-    @restaurant.destroy
+    @task = Task.find(params[:id])
+    @task.destroy
     redirect_to task_path
   end
 
