@@ -1,0 +1,14 @@
+<div class="container">
+  <h1 class="my-5">My Never Ending Tasks</h1>
+  <div class="row">
+    <% @tasks.each do |task| %>
+      <div class="col-6 col-lg-4">
+        <div class="shadow rounded p-3 mb-3">
+          <p><%= task.completed %></p>
+          <p><%= link_to task.title, task_path(task) %></p>
+          <p><%= task.details %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
